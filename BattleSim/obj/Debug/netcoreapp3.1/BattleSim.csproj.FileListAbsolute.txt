@@ -1,0 +1,17 @@
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\bin\Debug\netcoreapp3.1\BattleSim.exe
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\bin\Debug\netcoreapp3.1\BattleSim.deps.json
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\bin\Debug\netcoreapp3.1\BattleSim.runtimeconfig.json
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\bin\Debug\netcoreapp3.1\BattleSim.runtimeconfig.dev.json
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\bin\Debug\netcoreapp3.1\BattleSim.dll
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\bin\Debug\netcoreapp3.1\BattleSim.pdb
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.csproj.AssemblyReference.cache
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.FRM_BattleSim.resources
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.Properties.Resources.resources
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.csproj.GenerateResource.cache
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.AssemblyInfoInputs.cache
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.AssemblyInfo.cs
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.csproj.CoreCompileInputs.cache
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.dll
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.pdb
+C:\Users\kaan-\Downloads\BattleSim\BattleSim\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.genruntimeconfig.cache
