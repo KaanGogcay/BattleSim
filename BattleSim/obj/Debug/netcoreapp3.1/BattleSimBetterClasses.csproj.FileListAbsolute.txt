@@ -1,0 +1,17 @@
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\bin\Debug\netcoreapp3.1\BattleSimBetterClasses.exe
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\bin\Debug\netcoreapp3.1\BattleSimBetterClasses.deps.json
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\bin\Debug\netcoreapp3.1\BattleSimBetterClasses.runtimeconfig.json
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\bin\Debug\netcoreapp3.1\BattleSimBetterClasses.runtimeconfig.dev.json
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\bin\Debug\netcoreapp3.1\BattleSimBetterClasses.dll
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\bin\Debug\netcoreapp3.1\BattleSimBetterClasses.pdb
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.csproj.AssemblyReference.cache
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSim.FRM_Battle.resources
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.Properties.Resources.resources
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.csproj.GenerateResource.cache
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.AssemblyInfoInputs.cache
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.AssemblyInfo.cs
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.csproj.CoreCompileInputs.cache
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.dll
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.pdb
+C:\Users\kaan-\Downloads\BattleSimBetterClasses\BattleSimBetterClasses\BattleSim\obj\Debug\netcoreapp3.1\BattleSimBetterClasses.genruntimeconfig.cache
