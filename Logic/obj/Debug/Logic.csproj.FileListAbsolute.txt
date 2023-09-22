@@ -1,0 +1,24 @@
+C:\Users\kaan-\source\repos\BattleSim v3.0\Logic\bin\Debug\Logic.dll
+C:\Users\kaan-\source\repos\BattleSim v3.0\Logic\bin\Debug\Logic.pdb
+C:\Users\kaan-\source\repos\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\kaan-\source\repos\BattleSim v3.0\Logic\obj\Debug\Logic.dll
+C:\Users\kaan-\source\repos\BattleSim v3.0\Logic\obj\Debug\Logic.pdb
+C:\Users\kaan-\source\repos\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
+C:\Users\kaan-\source\repos\C#\BattleSim\BattleSim\BattleSim\Logic\bin\Debug\Logic.dll
+C:\Users\kaan-\source\repos\C#\BattleSim\BattleSim\BattleSim\Logic\bin\Debug\Logic.pdb
+C:\Users\kaan-\source\repos\C#\BattleSim\BattleSim\BattleSim\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
+C:\Users\kaan-\source\repos\C#\BattleSim\BattleSim\BattleSim\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\kaan-\source\repos\C#\BattleSim\BattleSim\BattleSim\Logic\obj\Debug\Logic.dll
+C:\Users\kaan-\source\repos\C#\BattleSim\BattleSim\BattleSim\Logic\obj\Debug\Logic.pdb
+C:\Users\kaan-\Downloads\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\bin\Debug\Logic.dll
+C:\Users\kaan-\Downloads\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\bin\Debug\Logic.pdb
+C:\Users\kaan-\Downloads\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
+C:\Users\kaan-\Downloads\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\kaan-\Downloads\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.dll
+C:\Users\kaan-\Downloads\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.pdb
+C:\Users\kaan-\source\repos\C#\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\bin\Debug\Logic.dll
+C:\Users\kaan-\source\repos\C#\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\bin\Debug\Logic.pdb
+C:\Users\kaan-\source\repos\C#\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
+C:\Users\kaan-\source\repos\C#\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\kaan-\source\repos\C#\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.dll
+C:\Users\kaan-\source\repos\C#\CrossyChainsaw BattleSim create-abilities BattleSim\Logic\obj\Debug\Logic.pdb
