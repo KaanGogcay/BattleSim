@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,34 +13,39 @@ namespace Logic
         Poisoned,
         Dead,
         Flinched,
+        Asleep
     }
     public enum NeoFighterNames
     {
         Korbat,
         Grarrl,
         Blumaroo,
-        Meepit
+        Meepit,
+        Kacheek
     }
 
     abstract public class NeoFighter
     {
         int _attackRange = 5;
+        int _minimalAttackPower = 10;
+        int _wakeUpChance = 35; // 30
         public Random rnd = new Random();
-        public NeoFighterNames Name { get; internal set; }
-        public string Description { get; internal set; }
-        public Statuses Status { get; internal set; }
-        public Statuses OldStatus { get; set; }
-        public int GainedHealth { get; internal set; }
-        public int Health { get; internal set; }
+        public NeoFighterNames Name { get; internal set; } // req
+        public string Description { get; internal set; } // req
+        public int Health { get; internal set; } // req
         /// <summary>The base attacking power. Each hit will range between attackingPower-5 and attackingPower+5</summary>
-        public int AttackPower { get; internal set; }
+        public int AttackPower { get; internal set; } // req
         /// <summary>Chance in percentage. Example 30 means 30% (max 100)</summary>
-        public int CritRatio { get; internal set; }
+        public int CritRatio { get; internal set; } // req
+        public string Attack1Name { get; internal set; } // req
+        public string Attack2Name { get; internal set; } // req
+        public string Attack3Name { get; internal set; } // req
+        public Statuses OldStatus { get; set; } // req clear
+        public Statuses Status { get; internal set; }
+        public int GainedHealth { get; internal set; }
         public int PoisonTurns { get; internal set; }
+        public int SleepTurns { get; internal set; }
         public string Event { get; internal set; }
-        public string Attack1Name { get; internal set; }
-        public string Attack2Name { get; internal set; }
-        public string Attack3Name { get; internal set; }
 
         // Attack
         public int Attack(Random rnd, int attackpower)
@@ -65,13 +71,21 @@ namespace Logic
         public void GainAttackPower(int attackPower)
         {
             AttackPower += attackPower;
-        }
-        public void LoseAttackPower(int attackPower)
-        {
-            AttackPower -= attackPower;
-            if (AttackPower < _attackRange)
+            if (attackPower > 0)
             {
-                AttackPower = 0; // minimal attacking power
+                Event += $"{Name} gained {attackPower} attack power\n\n";
+            }
+            else
+            {
+                if (AttackPower < _minimalAttackPower)
+                {
+                    AttackPower = _minimalAttackPower; // minimal attacking power
+                    Event += $"{Name}'s attack power can't be lowered more\n\n";
+                }
+                else
+                {
+                    Event += $"{Name} lost {attackPower} attack power\n\n";
+                }
             }
         }
         public void HalveAttackPower()
@@ -80,16 +94,24 @@ namespace Logic
             if (AttackPower < _attackRange)
             {
                 AttackPower = 0; // minimal attacking power
+                Event += $"{Name}'s attack power has been halved";
             }
         }
         // Health
         public void LoseHealth(int damage)
         {
-            Health -= damage;
+            if (damage != 0)
+            {
+                Health -= damage;
+                GainedHealth += -damage;
+                Event += $"{Name} lost {damage} health\n\n";
+            }
         }
         public void GainHealth(int health)
         {
             Health += health;
+            GainedHealth += health;
+            Event += $"{Name} gained {health} health\n\n";
         }
         public void ResetGainedHealth()
         {
@@ -98,7 +120,27 @@ namespace Logic
         // Status
         public void SetPoisoned()
         {
-            Status = Statuses.Poisoned;
+            if (Status == Statuses.Clear)
+            {
+                Status = Statuses.Poisoned;
+                Event += $"{Name} has been Poisoned\n\n";
+            }
+            else
+            {
+                Event += $"{Name} can't be poisoned if it's already {Status}\n\n";
+            }
+        }
+        public void SetAsleep()
+        {
+            if (Status == Statuses.Clear)
+            {
+                Status = Statuses.Asleep;
+                Event += $"{Name} fell Asleep\n\n";
+            }
+            else
+            {
+                Event += $"{Name} can't fall Asleep if it's already {Status}\n\n";
+            }
         }
         public void SetDead()
         {
@@ -107,6 +149,7 @@ namespace Logic
         public void SetFlinched()
         {
             Status = Statuses.Flinched;
+            Event += $"{Name} Flinched\n\n";
         }
         public void CureStatus()
         {
@@ -118,6 +161,21 @@ namespace Logic
             if (PoisonTurns > 3)
             {
                 CureStatus();
+                PoisonTurns = 0;
+            }
+        }
+        public void AddSleepTurn()
+        {
+            int wakeUpChance = rnd.Next(1, 101);
+            if (wakeUpChance <= _wakeUpChance && SleepTurns > 0)
+            {
+                CureStatus();
+                Event += $"{Name} Woke Up!\n\n";
+                SleepTurns = 0;
+            }
+            else
+            {
+                SleepTurns++;
             }
         }
         // Event

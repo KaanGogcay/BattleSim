@@ -118,22 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Blumaroo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blumaroo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BS_AndAnotherOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BS_AndAnotherOne.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BS_AnotherOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BS_AnotherOne.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BS_DjKhaledOnCoach" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BS_DjKhaledOnCoach.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Korbat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Korbat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Grarrl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Grarrl.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Korbat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Korbat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BS_AnotherOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BS_AnotherOne.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BS_AndAnotherOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BS_AndAnotherOne.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BS_DjKhaledOnCoach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BS_DjKhaledOnCoach.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blumaroo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blumaroo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kacheek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kacheek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Meepit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meepit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

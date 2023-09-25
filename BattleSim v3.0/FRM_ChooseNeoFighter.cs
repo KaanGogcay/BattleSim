@@ -8,7 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
+using System.Windows.Forms;
 
 namespace BattleSim_v3._0
 {
@@ -20,7 +20,7 @@ namespace BattleSim_v3._0
             FRM_TitleScreen = frm_titleScreen;
         }
 
-        public Form FRM_TitleScreen{ get; set; }
+        public Form FRM_TitleScreen { get; set; }
 
         private void FRM_Game_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -30,62 +30,113 @@ namespace BattleSim_v3._0
         private void BTN_Start_Click(object sender, EventArgs e)
         {
             Player player1 = new Player();
-            SetNeoFighterPlayer(player1, RB_Player1_Korbat, RB_Player1_Grarrl, RB_Player1_Blumaroo);
+            SetNeoFighterPlayer(player1, RB_Player1_Korbat, RB_Player1_Grarrl, RB_Player1_Blumaroo, RB_Player1_Meepit, RB_Player1_Kacheek);
             Player player2 = new Player();
-            SetNeoFighterPlayer(player2, RB_Player2_Korbat, RB_Player2_Grarrl, RB_Player2_Blumaroo);
+            SetNeoFighterPlayer(player2, RB_Player2_Korbat, RB_Player2_Grarrl, RB_Player2_Blumaroo, RB_Player2_Meepit, RB_Player2_Kacheek);
             this.Hide();
-            new FRM_Battle(player1, player2).Show();
+            new FRM_Battle(this, player1, player2).Show();
         }
-
-        void SetNeoFighterPlayer(Player player, RadioButton RB_Player_Korbat, RadioButton RB_Player_Grarrl, RadioButton RB_Player_Blumaroo) // Radio button list
+        // Hardcode
+        void SetNeoFighterPlayer(Player player, RadioButton RB_Korbat, RadioButton RB_Grarrl, RadioButton RB_Blumaroo, RadioButton RB_Meepit, RadioButton RB_Kacheek) // Radio button list
         {
-            if (RB_Player_Korbat.Checked)
+            if (RB_Korbat.Checked)
             {
                 player.SetNeoFighter(new Korbat());
             }
-            else if (RB_Player_Grarrl.Checked)
+            else if (RB_Grarrl.Checked)
             {
                 player.SetNeoFighter(new Grarrl());
             }
-            else if (RB_Player_Blumaroo.Checked)
+            else if (RB_Blumaroo.Checked)
             {
                 player.SetNeoFighter(new Blumaroo());
             }
+            else if (RB_Meepit.Checked)
+            {
+                player.SetNeoFighter(new Meepit());
+            }
+            else if (RB_Kacheek.Checked)
+            {
+                player.SetNeoFighter(new Kacheek());
+            }
+            else
+            {
+                throw new Exception();
+            }
         }
 
-        // Player 1 NeoFighter Stats
+        // Player 1 NeoFighter Stats - Hardcode
         private void RB_Player1_Korbat_CheckedChanged(object sender, EventArgs e)
         {
-            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, new Korbat());
+            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new Korbat());
         }
         private void RB_Player1_Grarrl_CheckedChanged(object sender, EventArgs e)
         {
-            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, new Grarrl());
+            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new Grarrl());
         }
         private void RB_Player1_Blumaroo_CheckedChanged(object sender, EventArgs e)
         {
-            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, new Blumaroo());
+            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new Blumaroo());
+        }
+        private void RB_Player1_Meepit_CheckedChanged(object sender, EventArgs e)
+        {
+            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new Meepit());
+        }
+        private void RB_Player1_Kacheek_CheckedChanged(object sender, EventArgs e)
+        {
+            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new Kacheek());
         }
 
-        // Player 2 NeoFighter Stats
+        // Player 2 NeoFighter Stats - Hardcode
         private void RB_Player2_Korbat_CheckedChanged(object sender, EventArgs e)
         {
-            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, new Korbat());
+            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, PB_Player2_NeoFighter, new Korbat());
         }
         private void RB_Player2_Grarrl_CheckedChanged(object sender, EventArgs e)
         {
-            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, new Grarrl());
+            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, PB_Player2_NeoFighter, new Grarrl());
         }
         private void RB_Player2_Blumaroo_CheckedChanged(object sender, EventArgs e)
         {
-            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, new Blumaroo());
+            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, PB_Player2_NeoFighter, new Blumaroo());
         }
-
-        void SetLabels(Label LBL_Health, Label LBL_AttackPower, Label LBL_Description, NeoFighter neoFighter)
+        private void RB_Player2_Meepit_CheckedChanged(object sender, EventArgs e)
+        {
+            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, PB_Player2_NeoFighter, new Meepit());
+        }
+        private void RB_Player2_Kacheek_CheckedChanged(object sender, EventArgs e)
+        {
+            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, PB_Player2_NeoFighter, new Kacheek());
+        }
+        // Hardcode
+        void SetLabels(Label LBL_Health, Label LBL_AttackPower, Label LBL_Description, PictureBox PB_NeoFighter, NeoFighter neoFighter)
         {
             LBL_Health.Text = $"Health: {neoFighter.Health}";
             LBL_AttackPower.Text = $"Attack Power: {neoFighter.AttackPower}";
             LBL_Description.Text = $"Description: {neoFighter.Description}";
+
+            // Hardcode
+            if (neoFighter is Korbat)
+            {
+                PB_NeoFighter.Image = Properties.Resources.Korbat;
+            }
+            else if (neoFighter is Grarrl)
+            {
+                PB_NeoFighter.Image = Properties.Resources.Grarrl;
+            }
+            else if (neoFighter is Blumaroo)
+            {
+                PB_NeoFighter.Image = Properties.Resources.Blumaroo;
+            }
+            else if (neoFighter is Meepit)
+            {
+                PB_NeoFighter.Image = Properties.Resources.Meepit;
+            }
+            else if (neoFighter is Kacheek)
+            {
+                PB_NeoFighter.Image = Properties.Resources.Kacheek;
+            }
         }
+
     }
 }

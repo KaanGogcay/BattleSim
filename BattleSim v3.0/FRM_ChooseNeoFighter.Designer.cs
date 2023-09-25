@@ -36,11 +36,15 @@ namespace BattleSim_v3._0
             this.RB_Player1_Korbat = new System.Windows.Forms.RadioButton();
             this.RB_Player1_Grarrl = new System.Windows.Forms.RadioButton();
             this.GB_Fighters1 = new System.Windows.Forms.GroupBox();
+            this.RB_Player1_Meepit = new System.Windows.Forms.RadioButton();
+            this.PB_Player1_NeoFighter = new System.Windows.Forms.PictureBox();
             this.LBL_Player1_AttackPower = new System.Windows.Forms.Label();
             this.LBL_Player1_Description = new System.Windows.Forms.Label();
             this.LBL_Player1_Health = new System.Windows.Forms.Label();
             this.RB_Player1_Blumaroo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RB_Player2_Meepit = new System.Windows.Forms.RadioButton();
+            this.PB_Player2_NeoFighter = new System.Windows.Forms.PictureBox();
             this.LBL_Player2_AttackPower = new System.Windows.Forms.Label();
             this.LBL_Player2_Description = new System.Windows.Forms.Label();
             this.LBL_Player2_Health = new System.Windows.Forms.Label();
@@ -48,8 +52,12 @@ namespace BattleSim_v3._0
             this.RB_Player2_Grarrl = new System.Windows.Forms.RadioButton();
             this.RB_Player2_Korbat = new System.Windows.Forms.RadioButton();
             this.BTN_Start = new System.Windows.Forms.Button();
+            this.RB_Player1_Kacheek = new System.Windows.Forms.RadioButton();
+            this.RB_Player2_Kacheek = new System.Windows.Forms.RadioButton();
             this.GB_Fighters1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Player1_NeoFighter)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Player2_NeoFighter)).BeginInit();
             this.SuspendLayout();
             // 
             // LBL_Choose
@@ -119,6 +127,9 @@ namespace BattleSim_v3._0
             // 
             // GB_Fighters1
             // 
+            this.GB_Fighters1.Controls.Add(this.RB_Player1_Kacheek);
+            this.GB_Fighters1.Controls.Add(this.RB_Player1_Meepit);
+            this.GB_Fighters1.Controls.Add(this.PB_Player1_NeoFighter);
             this.GB_Fighters1.Controls.Add(this.LBL_Player1_AttackPower);
             this.GB_Fighters1.Controls.Add(this.LBL_Player1_Description);
             this.GB_Fighters1.Controls.Add(this.LBL_Player1_Health);
@@ -134,6 +145,28 @@ namespace BattleSim_v3._0
             this.GB_Fighters1.Size = new System.Drawing.Size(292, 223);
             this.GB_Fighters1.TabIndex = 5;
             this.GB_Fighters1.TabStop = false;
+            // 
+            // RB_Player1_Meepit
+            // 
+            this.RB_Player1_Meepit.AutoSize = true;
+            this.RB_Player1_Meepit.Location = new System.Drawing.Point(4, 89);
+            this.RB_Player1_Meepit.Margin = new System.Windows.Forms.Padding(2);
+            this.RB_Player1_Meepit.Name = "RB_Player1_Meepit";
+            this.RB_Player1_Meepit.Size = new System.Drawing.Size(62, 20);
+            this.RB_Player1_Meepit.TabIndex = 11;
+            this.RB_Player1_Meepit.TabStop = true;
+            this.RB_Player1_Meepit.Text = "Meepit";
+            this.RB_Player1_Meepit.UseVisualStyleBackColor = true;
+            this.RB_Player1_Meepit.CheckedChanged += new System.EventHandler(this.RB_Player1_Meepit_CheckedChanged);
+            // 
+            // PB_Player1_NeoFighter
+            // 
+            this.PB_Player1_NeoFighter.Location = new System.Drawing.Point(206, 125);
+            this.PB_Player1_NeoFighter.Name = "PB_Player1_NeoFighter";
+            this.PB_Player1_NeoFighter.Size = new System.Drawing.Size(79, 86);
+            this.PB_Player1_NeoFighter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Player1_NeoFighter.TabIndex = 10;
+            this.PB_Player1_NeoFighter.TabStop = false;
             // 
             // LBL_Player1_AttackPower
             // 
@@ -176,6 +209,9 @@ namespace BattleSim_v3._0
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.RB_Player2_Kacheek);
+            this.groupBox1.Controls.Add(this.RB_Player2_Meepit);
+            this.groupBox1.Controls.Add(this.PB_Player2_NeoFighter);
             this.groupBox1.Controls.Add(this.LBL_Player2_AttackPower);
             this.groupBox1.Controls.Add(this.LBL_Player2_Description);
             this.groupBox1.Controls.Add(this.LBL_Player2_Health);
@@ -191,6 +227,28 @@ namespace BattleSim_v3._0
             this.groupBox1.Size = new System.Drawing.Size(292, 223);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // RB_Player2_Meepit
+            // 
+            this.RB_Player2_Meepit.AutoSize = true;
+            this.RB_Player2_Meepit.Location = new System.Drawing.Point(4, 89);
+            this.RB_Player2_Meepit.Margin = new System.Windows.Forms.Padding(2);
+            this.RB_Player2_Meepit.Name = "RB_Player2_Meepit";
+            this.RB_Player2_Meepit.Size = new System.Drawing.Size(62, 20);
+            this.RB_Player2_Meepit.TabIndex = 12;
+            this.RB_Player2_Meepit.TabStop = true;
+            this.RB_Player2_Meepit.Text = "Meepit";
+            this.RB_Player2_Meepit.UseVisualStyleBackColor = true;
+            this.RB_Player2_Meepit.CheckedChanged += new System.EventHandler(this.RB_Player2_Meepit_CheckedChanged);
+            // 
+            // PB_Player2_NeoFighter
+            // 
+            this.PB_Player2_NeoFighter.Location = new System.Drawing.Point(208, 125);
+            this.PB_Player2_NeoFighter.Name = "PB_Player2_NeoFighter";
+            this.PB_Player2_NeoFighter.Size = new System.Drawing.Size(79, 86);
+            this.PB_Player2_NeoFighter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PB_Player2_NeoFighter.TabIndex = 11;
+            this.PB_Player2_NeoFighter.TabStop = false;
             // 
             // LBL_Player2_AttackPower
             // 
@@ -245,13 +303,11 @@ namespace BattleSim_v3._0
             // RB_Player2_Korbat
             // 
             this.RB_Player2_Korbat.AutoSize = true;
-            this.RB_Player2_Korbat.Checked = true;
             this.RB_Player2_Korbat.Location = new System.Drawing.Point(4, 19);
             this.RB_Player2_Korbat.Margin = new System.Windows.Forms.Padding(2);
             this.RB_Player2_Korbat.Name = "RB_Player2_Korbat";
             this.RB_Player2_Korbat.Size = new System.Drawing.Size(60, 20);
             this.RB_Player2_Korbat.TabIndex = 3;
-            this.RB_Player2_Korbat.TabStop = true;
             this.RB_Player2_Korbat.Text = "Korbat";
             this.RB_Player2_Korbat.UseVisualStyleBackColor = true;
             this.RB_Player2_Korbat.CheckedChanged += new System.EventHandler(this.RB_Player2_Korbat_CheckedChanged);
@@ -270,6 +326,32 @@ namespace BattleSim_v3._0
             this.BTN_Start.UseVisualStyleBackColor = false;
             this.BTN_Start.Click += new System.EventHandler(this.BTN_Start_Click);
             // 
+            // RB_Player1_Kacheek
+            // 
+            this.RB_Player1_Kacheek.AutoSize = true;
+            this.RB_Player1_Kacheek.Location = new System.Drawing.Point(84, 65);
+            this.RB_Player1_Kacheek.Margin = new System.Windows.Forms.Padding(2);
+            this.RB_Player1_Kacheek.Name = "RB_Player1_Kacheek";
+            this.RB_Player1_Kacheek.Size = new System.Drawing.Size(69, 20);
+            this.RB_Player1_Kacheek.TabIndex = 12;
+            this.RB_Player1_Kacheek.TabStop = true;
+            this.RB_Player1_Kacheek.Text = "Kacheek";
+            this.RB_Player1_Kacheek.UseVisualStyleBackColor = true;
+            this.RB_Player1_Kacheek.CheckedChanged += new System.EventHandler(this.RB_Player1_Kacheek_CheckedChanged);
+            // 
+            // RB_Player2_Kacheek
+            // 
+            this.RB_Player2_Kacheek.AutoSize = true;
+            this.RB_Player2_Kacheek.Location = new System.Drawing.Point(84, 65);
+            this.RB_Player2_Kacheek.Margin = new System.Windows.Forms.Padding(2);
+            this.RB_Player2_Kacheek.Name = "RB_Player2_Kacheek";
+            this.RB_Player2_Kacheek.Size = new System.Drawing.Size(69, 20);
+            this.RB_Player2_Kacheek.TabIndex = 13;
+            this.RB_Player2_Kacheek.TabStop = true;
+            this.RB_Player2_Kacheek.Text = "Kacheek";
+            this.RB_Player2_Kacheek.UseVisualStyleBackColor = true;
+            this.RB_Player2_Kacheek.CheckedChanged += new System.EventHandler(this.RB_Player2_Kacheek_CheckedChanged);
+            // 
             // FRM_ChooseNeoFighter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,12 +367,14 @@ namespace BattleSim_v3._0
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_ChooseNeoFighter";
-            this.Text = "FRM_Game";
+            this.Text = "DJ Khaled\'s Neo-Strikeout";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FRM_Game_FormClosed);
             this.GB_Fighters1.ResumeLayout(false);
             this.GB_Fighters1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Player1_NeoFighter)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PB_Player2_NeoFighter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,5 +399,11 @@ namespace BattleSim_v3._0
         private System.Windows.Forms.Label LBL_Player2_Health;
         private System.Windows.Forms.Label LBL_Player1_AttackPower;
         private System.Windows.Forms.Label LBL_Player2_AttackPower;
+        private System.Windows.Forms.PictureBox PB_Player1_NeoFighter;
+        private System.Windows.Forms.PictureBox PB_Player2_NeoFighter;
+        private System.Windows.Forms.RadioButton RB_Player1_Meepit;
+        private System.Windows.Forms.RadioButton RB_Player2_Meepit;
+        private System.Windows.Forms.RadioButton RB_Player1_Kacheek;
+        private System.Windows.Forms.RadioButton RB_Player2_Kacheek;
     }
 }

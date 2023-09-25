@@ -54,7 +54,7 @@ namespace BattleSim_v3._0
             this.BTN_Start.Font = new System.Drawing.Font("Microsoft YaHei UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_Start.ForeColor = System.Drawing.Color.Orange;
             this.BTN_Start.Location = new System.Drawing.Point(449, 195);
-            this.BTN_Start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_Start.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_Start.Name = "BTN_Start";
             this.BTN_Start.Size = new System.Drawing.Size(144, 72);
             this.BTN_Start.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace BattleSim_v3._0
             // 
             this.pictureBox1.Image = global::BattleSim_v3._0.Properties.Resources.BS_DjKhaledOnCoach;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(626, 470);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +82,7 @@ namespace BattleSim_v3._0
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_TitleScreen";
             this.Text = "DJ Khaled\'s Neo-Strikeout";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

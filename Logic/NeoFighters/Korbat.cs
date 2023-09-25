@@ -8,32 +8,41 @@ namespace Logic.NeoFighters
 {
     public class Korbat : NeoFighter
     {
+        // Summary
+        NeoFighterNames _name = NeoFighterNames.Korbat;
+        string _description = "Evil Poisonous Bat";
+        // Stats
+        int _health = 270;
+        int _attackPower = 25;
+        int _critRatio = 13;
+        // Attack Effect Chances
         int _lifeStealAmount = 45; // this means 40% of its own attack is being healed
-        int _chanceToPoison = 40;
-
+        int _lifeStealGainedAttackPower = 10;
+        int _chanceToPoison = 45;
+        
+        // Methods
         public Korbat()
         {
-            Name = NeoFighterNames.Korbat;
-            Description = "Evil Poisonous Bat";
-            Health = 270;
-            AttackPower = 25;
-            CritRatio = 13;
-            OldStatus = Statuses.Clear;
-            Attack1Name = $"Life Steal - ({_lifeStealAmount}% Lifesteal)";
+            Attack1Name = $"Life Steal - ({_lifeStealAmount}% Lifesteal and gain {_lifeStealGainedAttackPower} attack power)";
             Attack2Name = $"Strychine - (dmg*2 if enemy poisoned)";
             Attack3Name = $"Poison Bite - ({_chanceToPoison}% chance to poison)";
+
+            // Don't Touch
+            Name = _name;
+            Description = _description;
+            Health = _health;
+            AttackPower = _attackPower;
+            CritRatio = _critRatio;
+            OldStatus = Statuses.Clear;
             Event = "";
         }
-
         public override int Attack1(Random rnd, NeoFighter enemyNeoFighter)
         {
             //LifeSteal
-            //heal 40% of dealth damage
+            //heal 40% of dealth damage and gain 20% attacking power
             int damage = Attack(rnd, AttackPower);
-            int gainHealth = damage * 40 / 100;
-            GainHealth(gainHealth);
-            GainedHealth = gainHealth;
-            Event += $"{Name} gained {gainHealth} health\n\n";
+            GainHealth(damage * _lifeStealAmount / 100);
+            GainAttackPower(damage * _lifeStealGainedAttackPower / 100);
             return damage;
         }
         public override int Attack2(Random rnd, NeoFighter enemyNeoFighter)
@@ -58,7 +67,6 @@ namespace Logic.NeoFighters
             if (poisonChance <= _chanceToPoison)
             {
                 enemyNeoFighter.SetPoisoned();
-                Event += "Korbat has poisoned the enemy\n\n";
             }
             int damage = Attack(rnd, AttackPower);
             return damage;

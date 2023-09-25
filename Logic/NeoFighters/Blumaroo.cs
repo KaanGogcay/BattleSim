@@ -7,32 +7,42 @@ using System.Threading.Tasks;
 namespace Logic.NeoFighters
 {
     public class Blumaroo : NeoFighter
-    {
-        int _woodenFistChanceToBoostAttack = 15;
+    {        
+        // Summary
+        NeoFighterNames _name = NeoFighterNames.Blumaroo;
+        string _description = "Wooden Ninja with extremely offensive moves";
+        // Stats
+        int _health = 300;
+        int _attackPower = 27;
+        int _critRatio = 8;
+        // Attack Effect Chances
+        int _woodenFistBoostAttackChance = 15;
         int _woodenFistAttackBoost = 14;
-        int _tornadoKickAttackPowerNerf = 27; // -27
-        int _flyingKneeBasePower = 20; // 40%
-        int _flyingKneeRecoil = 5;           // 30%
+        int _flyingKneeBasePower = 25;
+        int _flyingKneeRecoilPercentage = 20;
+       
+        // Methods
         public Blumaroo()
         {
-            Name = NeoFighterNames.Blumaroo;
-            Description = "Wooden Ninja with extremely offensive moves";
-            Health = 300;
-            AttackPower = 27;
-            CritRatio = 8;
-            OldStatus = Statuses.Clear;
-            Attack1Name = $"Wooden Fist - ({_woodenFistChanceToBoostAttack}% chance for {_woodenFistAttackBoost} pwr boost)";
+            Attack1Name = $"Wooden Fist - ({_woodenFistBoostAttackChance}% chance for {_woodenFistAttackBoost} pwr boost)";
             Attack2Name = $"Tornado Kick - (Triples damage but attack power gets halved)";
-            Attack3Name = $"Flying Knee - (attack with always {_flyingKneeBasePower} attack power, but {_flyingKneeRecoil} recoil)";
+            Attack3Name = $"Flying Knee - (attack with always {_flyingKneeBasePower} attack power, but {_flyingKneeRecoilPercentage}% recoil)";
+            
+            // Don't Touch
+            Name = _name;
+            Description = _description;
+            Health = _health;
+            AttackPower = _attackPower;
+            CritRatio = _critRatio;
+            OldStatus = Statuses.Clear;
             Event = "";
         }
-
         public override int Attack1(Random rnd, NeoFighter enemyNeoFighter)
         {
             //wooden fist
             //10% to increase attackPower by 1 stage?
             int attackBoostChance = rnd.Next(1, 101);
-            if (attackBoostChance <= _woodenFistChanceToBoostAttack)
+            if (attackBoostChance <= _woodenFistBoostAttackChance)
             {
                 GainAttackPower(_woodenFistAttackBoost);
                 Event = $"Power increased by {_woodenFistAttackBoost}\n\n";
@@ -47,7 +57,6 @@ namespace Logic.NeoFighters
             int damage = Attack(rnd, AttackPower);
             damage *= 3;
             HalveAttackPower();
-            Event += "Blumaroos attack power has been halved\n\n";
             return damage;
         }
         public override int Attack3(Random rnd, NeoFighter enemyNeoFighter)
@@ -55,10 +64,8 @@ namespace Logic.NeoFighters
             //Flying Knee
             //x1.4 dmg but recoil
             int damage = Attack(rnd, _flyingKneeBasePower);
-            int recoil = damage * (100 + _flyingKneeRecoil) / 100;
+            int recoil = (_flyingKneeRecoilPercentage * damage) / 100;
             LoseHealth(recoil);
-            GainedHealth = -recoil;
-            Event = "Blumaroo is een kanker megool";
             return damage;
         }
     }
