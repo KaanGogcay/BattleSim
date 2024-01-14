@@ -1,5 +1,5 @@
 # DJ Khaled's Neo-Strikeout
-My version of the coding exercise BattleSim
+(My version of the Fontys coding exercise BattleSim)
 
 ![image](https://github.com/CrossyChainsaw/BattleSim/assets/74303221/8ca5ba39-d9ae-4584-98bd-dcf76d2f0899)
 
