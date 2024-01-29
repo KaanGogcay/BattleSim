@@ -15,22 +15,24 @@ namespace Logic
         Flinched,
         Asleep
     }
-    public enum NeoFighterNames
+    public enum NeoFighterSpecies
     {
         Korbat,
         Grarrl,
         Blumaroo,
         Meepit,
-        Kacheek
+        Kacheek,
+        KikoAndChia
     }
 
     abstract public class NeoFighter
     {
         int _attackRange = 5;
         int _minimalAttackPower = 10;
-        int _wakeUpChance = 35; // 30
+        int _wakeUpChance = 40; // 30
         public Random rnd = new Random();
-        public NeoFighterNames Name { get; internal set; } // req
+        public NeoFighterSpecies Species { get; internal set; } // req
+        public string Name { get; internal set; }
         public string Description { get; internal set; } // req
         public int Health { get; internal set; } // req
         /// <summary>The base attacking power. Each hit will range between attackingPower-5 and attackingPower+5</summary>
@@ -73,18 +75,18 @@ namespace Logic
             AttackPower += attackPower;
             if (attackPower > 0)
             {
-                Event += $"{Name} gained {attackPower} attack power\n\n";
+                Event += $"{Species} gained {attackPower} attack power\n\n";
             }
             else
             {
                 if (AttackPower < _minimalAttackPower)
                 {
                     AttackPower = _minimalAttackPower; // minimal attacking power
-                    Event += $"{Name}'s attack power can't be lowered more\n\n";
+                    Event += $"{Species}'s attack power can't be lowered more\n\n";
                 }
                 else
                 {
-                    Event += $"{Name} lost {attackPower} attack power\n\n";
+                    Event += $"{Species} lost {attackPower} attack power\n\n";
                 }
             }
         }
@@ -94,7 +96,7 @@ namespace Logic
             if (AttackPower < _attackRange)
             {
                 AttackPower = 0; // minimal attacking power
-                Event += $"{Name}'s attack power has been halved";
+                Event += $"{Species}'s attack power has been halved";
             }
         }
         // Health
@@ -104,14 +106,14 @@ namespace Logic
             {
                 Health -= damage;
                 GainedHealth += -damage;
-                Event += $"{Name} lost {damage} health\n\n";
+                Event += $"{Species} lost {damage} health\n\n";
             }
         }
         public void GainHealth(int health)
         {
             Health += health;
             GainedHealth += health;
-            Event += $"{Name} gained {health} health\n\n";
+            Event += $"{Species} gained {health} health\n\n";
         }
         public void ResetGainedHealth()
         {
@@ -123,11 +125,11 @@ namespace Logic
             if (Status == Statuses.Clear)
             {
                 Status = Statuses.Poisoned;
-                Event += $"{Name} has been Poisoned\n\n";
+                Event += $"{Species} has been Poisoned\n\n";
             }
             else
             {
-                Event += $"{Name} can't be poisoned if it's already {Status}\n\n";
+                Event += $"{Species} can't be poisoned if it's already {Status}\n\n";
             }
         }
         public void SetAsleep()
@@ -135,11 +137,11 @@ namespace Logic
             if (Status == Statuses.Clear)
             {
                 Status = Statuses.Asleep;
-                Event += $"{Name} fell Asleep\n\n";
+                Event += $"{Species} fell Asleep\n\n";
             }
             else
             {
-                Event += $"{Name} can't fall Asleep if it's already {Status}\n\n";
+                Event += $"{Species} can't fall Asleep if it's already {Status}\n\n";
             }
         }
         public void SetDead()
@@ -149,7 +151,7 @@ namespace Logic
         public void SetFlinched()
         {
             Status = Statuses.Flinched;
-            Event += $"{Name} Flinched\n\n";
+            Event += $"{Species} Flinched\n\n";
         }
         public void CureStatus()
         {
@@ -170,7 +172,7 @@ namespace Logic
             if (wakeUpChance <= _wakeUpChance && SleepTurns > 0)
             {
                 CureStatus();
-                Event += $"{Name} Woke Up!\n\n";
+                Event += $"{Species} Woke Up!\n\n";
                 SleepTurns = 0;
             }
             else

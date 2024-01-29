@@ -9,7 +9,7 @@ namespace Logic.NeoFighters
     public class Blumaroo : NeoFighter
     {        
         // Summary
-        NeoFighterNames _name = NeoFighterNames.Blumaroo;
+        NeoFighterSpecies _species = NeoFighterSpecies.Blumaroo;
         string _description = "Wooden Ninja with extremely offensive moves";
         // Stats
         int _health = 300;
@@ -29,7 +29,8 @@ namespace Logic.NeoFighters
             Attack3Name = $"Flying Knee - (attack with always {_flyingKneeBasePower} attack power, but {_flyingKneeRecoilPercentage}% recoil)";
             
             // Don't Touch
-            Name = _name;
+            Species = _species;
+            Name = _species.ToString();
             Description = _description;
             Health = _health;
             AttackPower = _attackPower;

@@ -123,6 +123,16 @@ namespace BattleSim_v3._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap KikoAndChia {
+            get {
+                object obj = ResourceManager.GetObject("KikoAndChia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Korbat {
             get {
                 object obj = ResourceManager.GetObject("Korbat", resourceCulture);

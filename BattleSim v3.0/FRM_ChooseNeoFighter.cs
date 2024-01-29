@@ -27,17 +27,18 @@ namespace BattleSim_v3._0
             FRM_TitleScreen.Show();
         }
 
+        // Hardcoded (dynamically fill a list with radio buttons based of their name)
         private void BTN_Start_Click(object sender, EventArgs e)
         {
             Player player1 = new Player();
-            SetNeoFighterPlayer(player1, RB_Player1_Korbat, RB_Player1_Grarrl, RB_Player1_Blumaroo, RB_Player1_Meepit, RB_Player1_Kacheek);
+            SetNeoFighterPlayer(player1, RB_Player1_Korbat, RB_Player1_Grarrl, RB_Player1_Blumaroo, RB_Player1_Meepit, RB_Player1_Kacheek, RB_Player1_KikoAndChia);
             Player player2 = new Player();
-            SetNeoFighterPlayer(player2, RB_Player2_Korbat, RB_Player2_Grarrl, RB_Player2_Blumaroo, RB_Player2_Meepit, RB_Player2_Kacheek);
+            SetNeoFighterPlayer(player2, RB_Player2_Korbat, RB_Player2_Grarrl, RB_Player2_Blumaroo, RB_Player2_Meepit, RB_Player2_Kacheek, RB_Player2_KikoAndChia);
             this.Hide();
             new FRM_Battle(this, player1, player2).Show();
         }
         // Hardcode
-        void SetNeoFighterPlayer(Player player, RadioButton RB_Korbat, RadioButton RB_Grarrl, RadioButton RB_Blumaroo, RadioButton RB_Meepit, RadioButton RB_Kacheek) // Radio button list
+        void SetNeoFighterPlayer(Player player, RadioButton RB_Korbat, RadioButton RB_Grarrl, RadioButton RB_Blumaroo, RadioButton RB_Meepit, RadioButton RB_Kacheek, RadioButton RB_KikoAndChia) // Radio button list
         {
             if (RB_Korbat.Checked)
             {
@@ -59,13 +60,17 @@ namespace BattleSim_v3._0
             {
                 player.SetNeoFighter(new Kacheek());
             }
+            else if (RB_KikoAndChia.Checked)
+            {
+                player.SetNeoFighter(new KikoAndChia());
+            }
             else
             {
                 throw new Exception();
             }
         }
 
-        // Player 1 NeoFighter Stats - Hardcode
+        // Player 1 NeoFighter Stats - Hardcode (idea, foreachloop for all radiobuttons, based of their name, give them events)
         private void RB_Player1_Korbat_CheckedChanged(object sender, EventArgs e)
         {
             SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new Korbat());
@@ -85,6 +90,10 @@ namespace BattleSim_v3._0
         private void RB_Player1_Kacheek_CheckedChanged(object sender, EventArgs e)
         {
             SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new Kacheek());
+        }
+        private void RB_KikoAndChia_Player1_CheckedChanged(object sender, EventArgs e)
+        {
+            SetLabels(LBL_Player1_Health, LBL_Player1_AttackPower, LBL_Player1_Description, PB_Player1_NeoFighter, new KikoAndChia());
         }
 
         // Player 2 NeoFighter Stats - Hardcode
@@ -107,6 +116,10 @@ namespace BattleSim_v3._0
         private void RB_Player2_Kacheek_CheckedChanged(object sender, EventArgs e)
         {
             SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, PB_Player2_NeoFighter, new Kacheek());
+        }
+        private void RB_KikoAndChia_Player2_CheckedChanged(object sender, EventArgs e)
+        {
+            SetLabels(LBL_Player2_Health, LBL_Player2_AttackPower, LBL_Player2_Description, PB_Player2_NeoFighter, new KikoAndChia());
         }
         // Hardcode
         void SetLabels(Label LBL_Health, Label LBL_AttackPower, Label LBL_Description, PictureBox PB_NeoFighter, NeoFighter neoFighter)
@@ -135,6 +148,10 @@ namespace BattleSim_v3._0
             else if (neoFighter is Kacheek)
             {
                 PB_NeoFighter.Image = Properties.Resources.Kacheek;
+            }
+            else if (neoFighter is KikoAndChia)
+            {
+                PB_NeoFighter.Image = Properties.Resources.KikoAndChia;
             }
         }
 

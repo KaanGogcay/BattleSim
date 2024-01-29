@@ -9,7 +9,7 @@ namespace Logic.NeoFighters
     public class Korbat : NeoFighter
     {
         // Summary
-        NeoFighterNames _name = NeoFighterNames.Korbat;
+        NeoFighterSpecies _species = NeoFighterSpecies.Korbat;
         string _description = "Evil Poisonous Bat";
         // Stats
         int _health = 270;
@@ -23,12 +23,13 @@ namespace Logic.NeoFighters
         // Methods
         public Korbat()
         {
-            Attack1Name = $"Life Steal - ({_lifeStealAmount}% Lifesteal and gain {_lifeStealGainedAttackPower} attack power)";
+            Attack1Name = $"Life Steal - ({_lifeStealAmount}% Lifesteal and steal {_lifeStealGainedAttackPower} attack power)";
             Attack2Name = $"Strychine - (dmg*2 if enemy poisoned)";
             Attack3Name = $"Poison Bite - ({_chanceToPoison}% chance to poison)";
 
             // Don't Touch
-            Name = _name;
+            Species = _species;
+            Name = _species.ToString();
             Description = _description;
             Health = _health;
             AttackPower = _attackPower;
@@ -39,10 +40,11 @@ namespace Logic.NeoFighters
         public override int Attack1(Random rnd, NeoFighter enemyNeoFighter)
         {
             //LifeSteal
-            //heal 40% of dealth damage and gain 20% attacking power
+            //heal 40% of dealth damage and steal 10% attacking power
             int damage = Attack(rnd, AttackPower);
             GainHealth(damage * _lifeStealAmount / 100);
             GainAttackPower(damage * _lifeStealGainedAttackPower / 100);
+            enemyNeoFighter.GainAttackPower((damage * _lifeStealGainedAttackPower / 100) * -1);
             return damage;
         }
         public override int Attack2(Random rnd, NeoFighter enemyNeoFighter)

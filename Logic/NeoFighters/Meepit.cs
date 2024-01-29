@@ -9,7 +9,7 @@ namespace Logic.NeoFighters
     public class Meepit : NeoFighter
     {
         // Summary
-        NeoFighterNames _name = NeoFighterNames.Meepit;
+        NeoFighterSpecies _species = NeoFighterSpecies.Meepit;
         string _description = "Little Pink Homie which got bullied because he's pink, has more of a passive moveset";
         // Stats
         int _health = 100;
@@ -30,7 +30,8 @@ namespace Logic.NeoFighters
             Attack3Name = $"Rest - (Fall asleep and gain {_healthGainedWithRest} health but lose {_atttackPowerGainedWithRest} attack power)";
 
             // Don't Touch
-            Name = _name;
+            Species = _species;
+            Name = _species.ToString();
             Description = _description;
             Health = _health;
             AttackPower = _attackPower;

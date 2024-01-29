@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="NeoFighter.cs" />
     <Compile Include="NeoFighters\Kacheek.cs" />
+    <Compile Include="NeoFighters\KikoAndChia.cs" />
     <Compile Include="NeoFighters\Meepit.cs" />
     <Compile Include="NeoFighters\Blumaroo.cs" />
     <Compile Include="NeoFighters\Grarrl.cs" />

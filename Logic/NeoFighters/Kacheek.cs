@@ -9,7 +9,7 @@ namespace Logic.NeoFighters
     public class Kacheek : NeoFighter
     {
         // Summary
-        NeoFighterNames _name = NeoFighterNames.Kacheek;
+        NeoFighterSpecies _species = NeoFighterSpecies.Kacheek;
         string _description = "Little foxy boi who KNOWS how to hit it's enemy";
         // Stats
         int _health = 230;
@@ -28,7 +28,8 @@ namespace Logic.NeoFighters
             Attack3Name = $"Focus - Increases Attack Power by {_focusIncreaseAttackPowerAmount}";
 
             // Don't Touch
-            Name = _name;
+            Species = _species;
+            Name = _species.ToString();
             Description = _description;
             Health = _health;
             AttackPower = _attackPower;

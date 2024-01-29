@@ -66,7 +66,7 @@ namespace BattleSim_v3._0
                     PB_NeoFighter_P2.BackColor = Color.Black;
                 }
                 _deadPlayer.NeoFighter.SetDead();
-                _event += _deadPlayer.NeoFighter.Name + " died\n\n";
+                _event += _deadPlayer.NeoFighter.Species + " died\n\n";
             }
             Player1.NeoFighter.OldStatus = Player1.NeoFighter.Status;
             Player2.NeoFighter.OldStatus = Player2.NeoFighter.Status;
@@ -78,12 +78,12 @@ namespace BattleSim_v3._0
         }
         void LoadAttacks()
         {
-            GB_P1.Text = Player1.NeoFighter.Name.ToString();
+            GB_P1.Text = Player1.NeoFighter.Species.ToString();
             RB_P1_Attack1.Text = Player1.NeoFighter.Attack1Name;
             RB_P1_Attack2.Text = Player1.NeoFighter.Attack2Name;
             RB_P1_Attack3.Text = Player1.NeoFighter.Attack3Name;
 
-            GB_P2.Text = Player2.NeoFighter.Name.ToString();
+            GB_P2.Text = Player2.NeoFighter.Species.ToString();
             RB_P2_Attack1.Text = Player2.NeoFighter.Attack1Name;
             RB_P2_Attack2.Text = Player2.NeoFighter.Attack2Name;
             RB_P2_Attack3.Text = Player2.NeoFighter.Attack3Name;
@@ -91,27 +91,35 @@ namespace BattleSim_v3._0
         // Hardcode
         void LoadCorrectNeoFighterImage(PictureBox PB_Player_NeoFighter, Player player)
         {
-            if (player.NeoFighter.Name == NeoFighterNames.Korbat)
+            if (player.NeoFighter.Species == NeoFighterSpecies.Korbat)
             {
                 PB_Player_NeoFighter.Image = Properties.Resources.Korbat;
             }
-            else if (player.NeoFighter.Name == NeoFighterNames.Grarrl)
+            else if (player.NeoFighter.Species == NeoFighterSpecies.Grarrl)
             {
                 PB_Player_NeoFighter.Image = Properties.Resources.Grarrl;
             }
-            else if (player.NeoFighter.Name == NeoFighterNames.Blumaroo)
+            else if (player.NeoFighter.Species == NeoFighterSpecies.Blumaroo)
             {
                 PB_Player_NeoFighter.Image = Properties.Resources.Blumaroo;
             }
-            else if (player.NeoFighter.Name == NeoFighterNames.Meepit)
+            else if (player.NeoFighter.Species == NeoFighterSpecies.Meepit)
             {
                 PB_Player_NeoFighter.Image = Properties.Resources.Meepit;
             }
-            else if (player.NeoFighter.Name == NeoFighterNames.Kacheek)
+            else if (player.NeoFighter.Species == NeoFighterSpecies.Kacheek)
             {
                 PB_Player_NeoFighter.Image = Properties.Resources.Kacheek;
             }
-        } // not nice
+            else if (player.NeoFighter.Species == NeoFighterSpecies.KikoAndChia)
+            {
+                PB_Player_NeoFighter.Image = Properties.Resources.KikoAndChia;
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
         void MirrorImage(PictureBox PB_Player_NeoFighter)
         {
             PB_Player_NeoFighter.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);

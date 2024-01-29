@@ -9,7 +9,7 @@ namespace Logic.NeoFighters
     public class Grarrl : NeoFighter
     {
         // Summary
-        NeoFighterNames _name = NeoFighterNames.Grarrl;
+        NeoFighterSpecies _species = NeoFighterSpecies.Grarrl;
         string _description = "Bulky Dragon which mainly focusses on dealing damage";
         // Stats
         int _health = 360;
@@ -28,7 +28,8 @@ namespace Logic.NeoFighters
             Attack3Name = $"Dragon Rush - ({_dragonRushExtraDamage}% stronger attack)";
 
             // Don't Touch
-            Name = _name;
+            Species = _species;
+            Name = _species.ToString();
             Description = _description;
             Health = _health;
             AttackPower = _attackPower;
