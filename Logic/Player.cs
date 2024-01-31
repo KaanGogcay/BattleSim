@@ -9,10 +9,15 @@ namespace Logic
     public class Player
     {
         public NeoFighter NeoFighter { get; private set; }
+        public Agent Agent { get; private set; }
 
         public void SetNeoFighter(NeoFighter fighter)
         {
             this.NeoFighter = fighter;
+        }
+        public void SetAgent(AgentType agentType)
+        {
+            this.Agent = new Agent(agentType);
         }
     }
 }

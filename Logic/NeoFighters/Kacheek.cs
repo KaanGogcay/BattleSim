@@ -17,7 +17,7 @@ namespace Logic.NeoFighters
         int _critRatio = 40;
         // Attack Effect Chances
         int _pokeFlinchChance = 45;
-        int _tickleLowerAttackAmount = 6;
+        int _tickleLowerAttackAmount = 7;
         int _focusIncreaseAttackPowerAmount = 6;
 
         // Methods

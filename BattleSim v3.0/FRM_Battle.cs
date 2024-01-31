@@ -16,7 +16,6 @@ namespace BattleSim_v3._0
     public partial class FRM_Battle : Form
     {
         // Fields
-        // Fields
         Random rnd = new Random();
         public Form FRM_ChooseNeoFighter { get; private set; }
         public Player Player1 { get; private set; }
@@ -29,7 +28,6 @@ namespace BattleSim_v3._0
         Color _flinchColor = Color.DimGray;
         Color _noStatusColor = SystemColors.Control;
 
-        // Visuals
         // Visuals
         private void FRM_Battle_Load(object sender, EventArgs e)
         {
@@ -351,7 +349,6 @@ namespace BattleSim_v3._0
 
 
         // Events
-        // Events
         private void FRM_Battle_FormClosed(object sender, FormClosedEventArgs e)
         {
             FRM_ChooseNeoFighter.Show();
@@ -361,12 +358,49 @@ namespace BattleSim_v3._0
             // pre attack status
             PreAttackStatusEffects(Player2.NeoFighter, PB_NeoFighter_P2);
             Turn(Player1, PB_NeoFighter_P1, LBL_Player1_Health, Player2, PB_NeoFighter_P2, LBL_Player2_Health, Attack_Player1());
+            
+            // Random Agent
+            if (Player2.Agent.AgentType == AgentType.Random)
+            {
+                RandomAgentTurn();
+            }
+            // Reinforcement Learning Agent
+            if (Player2.Agent.AgentType == AgentType.ReinforcementLearning)
+            {
+
+            }
         }
-        private void BTN_Player2_Attack_Click(object sender, EventArgs e)
+        void BTN_Player2_Attack_Click(object sender, EventArgs e)
         {
             // pre attack status
             PreAttackStatusEffects(Player1.NeoFighter, PB_NeoFighter_P1);
             Turn(Player2, PB_NeoFighter_P2, LBL_Player2_Health, Player1, PB_NeoFighter_P1, LBL_Player1_Health, Attack_Player2());
+        }
+
+        // Agents
+        async void RandomAgentTurn()
+        {
+            // check if both players are alive
+            if (Player1.NeoFighter.Status != Statuses.Dead && Player2.NeoFighter.Status != Statuses.Dead)
+            {
+                // if agent is not flinched or asleep play
+                if (Player2.NeoFighter.Status != Statuses.Flinched && Player2.NeoFighter.Status != Statuses.Asleep)
+                {
+                    Player2.Agent.ChooseAttack(RB_P2_Attack1, RB_P2_Attack2, RB_P2_Attack3);
+                    await Task.Delay(1000);
+                    PreAttackStatusEffects(Player1.NeoFighter, PB_NeoFighter_P1);
+                    Turn(Player2, PB_NeoFighter_P2, LBL_Player2_Health, Player1, PB_NeoFighter_P1, LBL_Player1_Health, Attack_Player2());
+
+                    // if opponent is flinced or asleep keep attacking
+                    while (Player1.NeoFighter.Status == Statuses.Flinched || Player1.NeoFighter.Status == Statuses.Asleep)
+                    {
+                        Player2.Agent.ChooseAttack(RB_P2_Attack1, RB_P2_Attack2, RB_P2_Attack3);
+                        await Task.Delay(1000);
+                        PreAttackStatusEffects(Player1.NeoFighter, PB_NeoFighter_P1);
+                        Turn(Player2, PB_NeoFighter_P2, LBL_Player2_Health, Player1, PB_NeoFighter_P1, LBL_Player1_Health, Attack_Player2());
+                    }
+                }
+            }
         }
     }
 }

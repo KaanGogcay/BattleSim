@@ -36,6 +36,7 @@ namespace BattleSim_v3._0
             this.RB_Player1_Korbat = new System.Windows.Forms.RadioButton();
             this.RB_Player1_Grarrl = new System.Windows.Forms.RadioButton();
             this.GB_Fighters1 = new System.Windows.Forms.GroupBox();
+            this.RB_Player1_KikoAndChia = new System.Windows.Forms.RadioButton();
             this.RB_Player1_Kacheek = new System.Windows.Forms.RadioButton();
             this.RB_Player1_Meepit = new System.Windows.Forms.RadioButton();
             this.PB_Player1_NeoFighter = new System.Windows.Forms.PictureBox();
@@ -44,6 +45,10 @@ namespace BattleSim_v3._0
             this.LBL_Player1_Health = new System.Windows.Forms.Label();
             this.RB_Player1_Blumaroo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RB_Agent2_Random = new System.Windows.Forms.RadioButton();
+            this.RB_Agent2_Disabled = new System.Windows.Forms.RadioButton();
+            this.RB_Player2_KikoAndChia = new System.Windows.Forms.RadioButton();
             this.RB_Player2_Kacheek = new System.Windows.Forms.RadioButton();
             this.RB_Player2_Meepit = new System.Windows.Forms.RadioButton();
             this.PB_Player2_NeoFighter = new System.Windows.Forms.PictureBox();
@@ -54,11 +59,11 @@ namespace BattleSim_v3._0
             this.RB_Player2_Grarrl = new System.Windows.Forms.RadioButton();
             this.RB_Player2_Korbat = new System.Windows.Forms.RadioButton();
             this.BTN_Start = new System.Windows.Forms.Button();
-            this.RB_Player1_KikoAndChia = new System.Windows.Forms.RadioButton();
-            this.RB_Player2_KikoAndChia = new System.Windows.Forms.RadioButton();
+            this.RB_Agent2_RL = new System.Windows.Forms.RadioButton();
             this.GB_Fighters1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Player1_NeoFighter)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Player2_NeoFighter)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,6 +154,19 @@ namespace BattleSim_v3._0
             this.GB_Fighters1.TabIndex = 5;
             this.GB_Fighters1.TabStop = false;
             // 
+            // RB_Player1_KikoAndChia
+            // 
+            this.RB_Player1_KikoAndChia.AutoSize = true;
+            this.RB_Player1_KikoAndChia.Location = new System.Drawing.Point(84, 89);
+            this.RB_Player1_KikoAndChia.Margin = new System.Windows.Forms.Padding(2);
+            this.RB_Player1_KikoAndChia.Name = "RB_Player1_KikoAndChia";
+            this.RB_Player1_KikoAndChia.Size = new System.Drawing.Size(87, 20);
+            this.RB_Player1_KikoAndChia.TabIndex = 13;
+            this.RB_Player1_KikoAndChia.TabStop = true;
+            this.RB_Player1_KikoAndChia.Text = "Kiko && Chia";
+            this.RB_Player1_KikoAndChia.UseVisualStyleBackColor = true;
+            this.RB_Player1_KikoAndChia.CheckedChanged += new System.EventHandler(this.RB_KikoAndChia_Player1_CheckedChanged);
+            // 
             // RB_Player1_Kacheek
             // 
             this.RB_Player1_Kacheek.AutoSize = true;
@@ -225,6 +243,7 @@ namespace BattleSim_v3._0
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.RB_Player2_KikoAndChia);
             this.groupBox1.Controls.Add(this.RB_Player2_Kacheek);
             this.groupBox1.Controls.Add(this.RB_Player2_Meepit);
@@ -244,6 +263,53 @@ namespace BattleSim_v3._0
             this.groupBox1.Size = new System.Drawing.Size(292, 223);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.RB_Agent2_RL);
+            this.groupBox2.Controls.Add(this.RB_Agent2_Random);
+            this.groupBox2.Controls.Add(this.RB_Agent2_Disabled);
+            this.groupBox2.Location = new System.Drawing.Point(208, 9);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(79, 100);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Agent";
+            // 
+            // RB_Agent2_Random
+            // 
+            this.RB_Agent2_Random.AutoSize = true;
+            this.RB_Agent2_Random.Location = new System.Drawing.Point(5, 40);
+            this.RB_Agent2_Random.Name = "RB_Agent2_Random";
+            this.RB_Agent2_Random.Size = new System.Drawing.Size(69, 20);
+            this.RB_Agent2_Random.TabIndex = 1;
+            this.RB_Agent2_Random.Text = "Random";
+            this.RB_Agent2_Random.UseVisualStyleBackColor = true;
+            // 
+            // RB_Agent2_Disabled
+            // 
+            this.RB_Agent2_Disabled.AutoSize = true;
+            this.RB_Agent2_Disabled.Checked = true;
+            this.RB_Agent2_Disabled.Location = new System.Drawing.Point(5, 20);
+            this.RB_Agent2_Disabled.Name = "RB_Agent2_Disabled";
+            this.RB_Agent2_Disabled.Size = new System.Drawing.Size(41, 20);
+            this.RB_Agent2_Disabled.TabIndex = 0;
+            this.RB_Agent2_Disabled.TabStop = true;
+            this.RB_Agent2_Disabled.Text = "No";
+            this.RB_Agent2_Disabled.UseVisualStyleBackColor = true;
+            // 
+            // RB_Player2_KikoAndChia
+            // 
+            this.RB_Player2_KikoAndChia.AutoSize = true;
+            this.RB_Player2_KikoAndChia.Location = new System.Drawing.Point(84, 89);
+            this.RB_Player2_KikoAndChia.Margin = new System.Windows.Forms.Padding(2);
+            this.RB_Player2_KikoAndChia.Name = "RB_Player2_KikoAndChia";
+            this.RB_Player2_KikoAndChia.Size = new System.Drawing.Size(87, 20);
+            this.RB_Player2_KikoAndChia.TabIndex = 14;
+            this.RB_Player2_KikoAndChia.TabStop = true;
+            this.RB_Player2_KikoAndChia.Text = "Kiko && Chia";
+            this.RB_Player2_KikoAndChia.UseVisualStyleBackColor = true;
+            this.RB_Player2_KikoAndChia.CheckedChanged += new System.EventHandler(this.RB_KikoAndChia_Player2_CheckedChanged);
             // 
             // RB_Player2_Kacheek
             // 
@@ -356,31 +422,16 @@ namespace BattleSim_v3._0
             this.BTN_Start.UseVisualStyleBackColor = false;
             this.BTN_Start.Click += new System.EventHandler(this.BTN_Start_Click);
             // 
-            // RB_Player1_KikoAndChia
+            // RB_Agent2_RL
             // 
-            this.RB_Player1_KikoAndChia.AutoSize = true;
-            this.RB_Player1_KikoAndChia.Location = new System.Drawing.Point(84, 89);
-            this.RB_Player1_KikoAndChia.Margin = new System.Windows.Forms.Padding(2);
-            this.RB_Player1_KikoAndChia.Name = "RB_Player1_KikoAndChia";
-            this.RB_Player1_KikoAndChia.Size = new System.Drawing.Size(87, 20);
-            this.RB_Player1_KikoAndChia.TabIndex = 13;
-            this.RB_Player1_KikoAndChia.TabStop = true;
-            this.RB_Player1_KikoAndChia.Text = "Kiko && Chia";
-            this.RB_Player1_KikoAndChia.UseVisualStyleBackColor = true;
-            this.RB_Player1_KikoAndChia.CheckedChanged += new System.EventHandler(this.RB_KikoAndChia_Player1_CheckedChanged);
-            // 
-            // RB_Player2_KikoAndChia
-            // 
-            this.RB_Player2_KikoAndChia.AutoSize = true;
-            this.RB_Player2_KikoAndChia.Location = new System.Drawing.Point(84, 89);
-            this.RB_Player2_KikoAndChia.Margin = new System.Windows.Forms.Padding(2);
-            this.RB_Player2_KikoAndChia.Name = "RB_Player2_KikoAndChia";
-            this.RB_Player2_KikoAndChia.Size = new System.Drawing.Size(87, 20);
-            this.RB_Player2_KikoAndChia.TabIndex = 14;
-            this.RB_Player2_KikoAndChia.TabStop = true;
-            this.RB_Player2_KikoAndChia.Text = "Kiko && Chia";
-            this.RB_Player2_KikoAndChia.UseVisualStyleBackColor = true;
-            this.RB_Player2_KikoAndChia.CheckedChanged += new System.EventHandler(this.RB_KikoAndChia_Player2_CheckedChanged);
+            this.RB_Agent2_RL.AutoSize = true;
+            this.RB_Agent2_RL.Enabled = false;
+            this.RB_Agent2_RL.Location = new System.Drawing.Point(5, 60);
+            this.RB_Agent2_RL.Name = "RB_Agent2_RL";
+            this.RB_Agent2_RL.Size = new System.Drawing.Size(38, 20);
+            this.RB_Agent2_RL.TabIndex = 2;
+            this.RB_Agent2_RL.Text = "RL";
+            this.RB_Agent2_RL.UseVisualStyleBackColor = true;
             // 
             // FRM_ChooseNeoFighter
             // 
@@ -404,6 +455,8 @@ namespace BattleSim_v3._0
             ((System.ComponentModel.ISupportInitialize)(this.PB_Player1_NeoFighter)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Player2_NeoFighter)).EndInit();
             this.ResumeLayout(false);
 
@@ -437,5 +490,9 @@ namespace BattleSim_v3._0
         private System.Windows.Forms.RadioButton RB_Player2_Kacheek;
         private System.Windows.Forms.RadioButton RB_Player1_KikoAndChia;
         private System.Windows.Forms.RadioButton RB_Player2_KikoAndChia;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton RB_Agent2_Random;
+        private System.Windows.Forms.RadioButton RB_Agent2_Disabled;
+        private System.Windows.Forms.RadioButton RB_Agent2_RL;
     }
 }

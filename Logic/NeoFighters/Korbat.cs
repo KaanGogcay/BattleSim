@@ -23,7 +23,7 @@ namespace Logic.NeoFighters
         // Methods
         public Korbat()
         {
-            Attack1Name = $"Life Steal - ({_lifeStealAmount}% Lifesteal and steal {_lifeStealGainedAttackPower} attack power)";
+            Attack1Name = $"Life Steal - ({_lifeStealAmount}% Lifesteal and steal {_lifeStealGainedAttackPower}% attack power)";
             Attack2Name = $"Strychine - (dmg*2 if enemy poisoned)";
             Attack3Name = $"Poison Bite - ({_chanceToPoison}% chance to poison)";
 
