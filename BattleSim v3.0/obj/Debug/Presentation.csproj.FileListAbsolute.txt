@@ -77,3 +77,22 @@ C:\Users\kaan-\source\repos\C#\BattleSim v3.0\BattleSim v3.0\obj\Debug\Presentat
 C:\Users\kaan-\source\repos\C#\BattleSim v3.0\BattleSim v3.0\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\kaan-\source\repos\C#\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim v3.0.exe
 C:\Users\kaan-\source\repos\C#\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim v3.0.pdb
+C:\Users\kaan-\source\repos\C#\BattleSim v3.0\BattleSim v3.0\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kaan-\source\repos\C#\BattleSim v3.0\BattleSim v3.0\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\bin\Debug\Logic.dll
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\bin\Debug\Logic.pdb
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\Presentation.csproj.AssemblyReference.cache
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim_v3._0.FRM_Battle.resources
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim_v3._0.FRM_ChooseNeoFighter.resources
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim_v3._0.FRM_TitleScreen.resources
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim_v3._0.Properties.Resources.resources
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\Presentation.csproj.GenerateResource.cache
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim v3.0.exe
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\BattleSim v3.0.pdb
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\bin\Debug\BattleSim v3.0.exe.config
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\bin\Debug\BattleSim v3.0.exe
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\bin\Debug\BattleSim v3.0.pdb
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\BattleSim v3.0\obj\Debug\Presenta.BC777DBE.Up2Date

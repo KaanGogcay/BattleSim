@@ -13,12 +13,12 @@ namespace Logic.NeoFighters
         string _description = "Bulky Dragon which mainly focusses on dealing damage";
         // Stats
         int _health = 360;
-        int _attackPower = 32;
+        int _attackPower = 31;
         int _critRatio = 6;
         // Attack Effect Chances
         int _chanceToFlinch = 25;
         int _gainPowerWithFocus = 8;
-        int _dragonRushExtraDamage = 25;
+        int _dragonRushExtraDamage = 20;
 
         // Methods
         public Grarrl()

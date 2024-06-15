@@ -13,7 +13,7 @@ namespace Logic.NeoFighters
         string _description = "Evil Poisonous Bat";
         // Stats
         int _health = 270;
-        int _attackPower = 25;
+        int _attackPower = 24;
         int _critRatio = 13;
         // Attack Effect Chances
         int _lifeStealAmount = 45; // this means 40% of its own attack is being healed

@@ -83,7 +83,8 @@ namespace BattleSim_v3._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BS_AnotherOne {
+        internal static System.Drawing.Bitmap 
+            One {
             get {
                 object obj = ResourceManager.GetObject("BS_AnotherOne", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

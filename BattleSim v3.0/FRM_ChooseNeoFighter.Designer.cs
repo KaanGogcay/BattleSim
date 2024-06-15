@@ -46,6 +46,7 @@ namespace BattleSim_v3._0
             this.RB_Player1_Blumaroo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RB_Agent2_RL = new System.Windows.Forms.RadioButton();
             this.RB_Agent2_Random = new System.Windows.Forms.RadioButton();
             this.RB_Agent2_Disabled = new System.Windows.Forms.RadioButton();
             this.RB_Player2_KikoAndChia = new System.Windows.Forms.RadioButton();
@@ -59,7 +60,6 @@ namespace BattleSim_v3._0
             this.RB_Player2_Grarrl = new System.Windows.Forms.RadioButton();
             this.RB_Player2_Korbat = new System.Windows.Forms.RadioButton();
             this.BTN_Start = new System.Windows.Forms.Button();
-            this.RB_Agent2_RL = new System.Windows.Forms.RadioButton();
             this.GB_Fighters1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Player1_NeoFighter)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -276,6 +276,16 @@ namespace BattleSim_v3._0
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agent";
             // 
+            // RB_Agent2_RL
+            // 
+            this.RB_Agent2_RL.AutoSize = true;
+            this.RB_Agent2_RL.Location = new System.Drawing.Point(5, 60);
+            this.RB_Agent2_RL.Name = "RB_Agent2_RL";
+            this.RB_Agent2_RL.Size = new System.Drawing.Size(38, 20);
+            this.RB_Agent2_RL.TabIndex = 2;
+            this.RB_Agent2_RL.Text = "RL";
+            this.RB_Agent2_RL.UseVisualStyleBackColor = true;
+            // 
             // RB_Agent2_Random
             // 
             this.RB_Agent2_Random.AutoSize = true;
@@ -421,17 +431,6 @@ namespace BattleSim_v3._0
             this.BTN_Start.Text = "Start";
             this.BTN_Start.UseVisualStyleBackColor = false;
             this.BTN_Start.Click += new System.EventHandler(this.BTN_Start_Click);
-            // 
-            // RB_Agent2_RL
-            // 
-            this.RB_Agent2_RL.AutoSize = true;
-            this.RB_Agent2_RL.Enabled = false;
-            this.RB_Agent2_RL.Location = new System.Drawing.Point(5, 60);
-            this.RB_Agent2_RL.Name = "RB_Agent2_RL";
-            this.RB_Agent2_RL.Size = new System.Drawing.Size(38, 20);
-            this.RB_Agent2_RL.TabIndex = 2;
-            this.RB_Agent2_RL.Text = "RL";
-            this.RB_Agent2_RL.UseVisualStyleBackColor = true;
             // 
             // FRM_ChooseNeoFighter
             // 

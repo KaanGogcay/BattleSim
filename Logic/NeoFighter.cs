@@ -17,8 +17,8 @@ namespace Logic
     }
     public enum NeoFighterSpecies
     {
-        Korbat,
-        Grarrl,
+        Korbat = 0,
+        Grarrl = 1,
         Blumaroo,
         Meepit,
         Kacheek,
@@ -29,7 +29,8 @@ namespace Logic
     {
         int _attackRange = 5;
         int _minimalAttackPower = 10;
-        int _wakeUpChance = 40; // 30
+        int _wakeUpChance = 45; // 30
+        int _poisonDamage = 5;
         public Random rnd = new Random();
         public NeoFighterSpecies Species { get; internal set; } // req
         public string Name { get; internal set; }
@@ -119,6 +120,16 @@ namespace Logic
         {
             GainedHealth = 0;
         }
+        public void PoisonDamage()
+        {
+            if (_poisonDamage != 0)
+            {
+                Health -= _poisonDamage;
+                GainedHealth += -_poisonDamage;
+                Event += $"{Species} lost {_poisonDamage} health due to poison\n\n";
+            }
+            AddPoisonTurn();
+        }
         // Status
         public void SetPoisoned()
         {
@@ -157,7 +168,7 @@ namespace Logic
         {
             Status = Statuses.Clear;
         }
-        public void AddPoisonTurn()
+        void AddPoisonTurn()
         {
             PoisonTurns += 1;
             if (PoisonTurns > 3)

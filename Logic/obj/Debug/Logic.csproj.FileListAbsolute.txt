@@ -28,3 +28,15 @@ C:\Users\kaan-\source\repos\C#\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.Assem
 C:\Users\kaan-\source\repos\C#\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
 C:\Users\kaan-\source\repos\C#\BattleSim v3.0\Logic\obj\Debug\Logic.dll
 C:\Users\kaan-\source\repos\C#\BattleSim v3.0\Logic\obj\Debug\Logic.pdb
+C:\Users\kaan-\source\repos\C#\BattleSim v3.0\Logic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kaan-\source\repos\C#\BattleSim v3.0\Logic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\kaan-\source\repos\C#\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.CopyComplete
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\bin\Debug\Logic.dll
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\bin\Debug\Logic.pdb
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.AssemblyReference.cache
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.CoreCompileInputs.cache
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\obj\Debug\Logic.csproj.Up2Date
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\obj\Debug\Logic.dll
+C:\Users\Kaan\source\repos\C#\_NotSemester7\BattleSim v3.0\Logic\obj\Debug\Logic.pdb
